@@ -3,34 +3,29 @@ package alura.fundamentos;
 import java.util.Scanner;
 
 public class MovimentacaoBancaria {
-
     public static void main(String[] args) {
-       String dadosCliente = """
-               ********************************
-               Dados Inicias Do Cliente
-                
-               Nome: José Bezerra Filho
-               Tipo Conta: Corrente
-               Saldo Inicial: R$ 2500,00
-               ********************************
-               """;
+        String nomeCliente = "John Lennon";
+        String tipoConta = "Corrente";
+        double saldo = 2500;
+        Scanner sc = new Scanner(System.in);
+        int option = 0;
 
-        System.out.println(dadosCliente);
+        System.out.printf("***************************\n" +
+                          "Dados Iniciais do Cliente\n" +
+                          "Nome: %s\n" +
+                          "Tipo De Conta: %s\n" +
+                          "Saldo Inicial: R$ %.2f\n" +
+                          "***************************\n\n", nomeCliente, tipoConta, saldo);
 
-        String menuOperacoes = """
+        String menu = """
                 1 - Consultar Saldos
                 2 - Receber Valor
                 3 - Transferir Valor
                 4 - Sair
                 """;
 
-        System.out.println(menuOperacoes);
-
-        double saldo = 2500;
-        Scanner sc = new Scanner(System.in);
-        int option = 0;
-
         while (option != 4) {
+            System.out.println(menu);
             System.out.print("Digite sua opção: ");
             option = sc.nextInt();
             switch (option) {
