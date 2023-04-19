@@ -2,7 +2,7 @@ public class Movie {
     String name;
     int releaseYear;
     boolean includedInThePlan;
-    double sumRating;
+    private double sumRating;
     int ratingTotal;
     int durationInMinutes;
 

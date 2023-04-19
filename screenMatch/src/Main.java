@@ -12,5 +12,6 @@ public class Main {
         System.out.println("Média de avaliação do filme: " + myMovie.pegaMedia());
         System.out.println(myMovie.ratingTotal);
         System.out.println(myMovie.sumRating);
+        myMovie.sumRating = 10;
     }
 }
